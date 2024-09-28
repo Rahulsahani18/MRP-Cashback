@@ -1,0 +1,95 @@
+/* CashbackScreen.css */
+
+/* Container setup for full-screen centering */
+.cashback-wrapper {
+    height: 100vh;
+  }
+  
+  .cashback-card {
+    width: 100%;
+    max-width: 500px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s ease;
+  }
+  
+  .cashback-card.animate {
+    transform: scale(1.05);
+  }
+  
+  /* Input styles */
+  .custom-input {
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #dee2e6;
+    transition: border 0.3s ease;
+  }
+  
+  .custom-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: none;
+  }
+  
+  /* Checkmark animation */
+  .checkmark-circle {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    display: inline-block;
+    background-color: #28a745;
+    border-radius: 50%;
+    animation: pop 0.8s ease forwards;
+  }
+  
+  .checkmark-circle .checkmark {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 60px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(48deg);
+    border-right: 5px solid white;
+    border-bottom: 5px solid white;
+    animation: draw 0.4s ease forwards;
+  }
+  
+  @keyframes pop {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes draw {
+    0% {
+      width: 0;
+      height: 0;
+    }
+    100% {
+      width: 30px;
+      height: 60px;
+    }
+  }
+  
+  /* Cashback result amount glow */
+  .cashback-amount {
+    font-size: 28px;
+    color: #28a745;
+    font-weight: bold;
+    animation: glow 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 5px #28a745, 0 0 10px #28a745, 0 0 15px #28a745;
+    }
+    100% {
+      text-shadow: 0 0 15px #a9fb85, 0 0 25px #91f9e8, 0 0 40px #91f9e8;
+    }
+  }
+  
